@@ -3,7 +3,7 @@ This is empty on purpose! Your code to build the resume will go here.
  */
 var bio = {
 	"name" : "Julia Hendrickson",
-	"role" : "Graphic Designer and Web Developer",
+	"role" : "  Graphic Designer and Web Developer",
 	"contacts" : {
 		"mobile" : "324-456-7656",
 		"email" : "julia@gmail.com",
@@ -27,10 +27,14 @@ var formattedEmail =
 
 var formattedBioPic =
 	HTMLbioPic.replace("%data%", bio.photo);
+	
+var formattedWelcomeMessage = 
+	HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 		
 $("#header").prepend(formattedRole);
 $("#header").prepend(formattedName);
 $("#topContacts").append(formattedMobile);
 $("#topContacts").append(formattedEmail);
 $("#header").append(formattedBioPic);
+$("#header").append(formattedWelcomeMessage);
 	

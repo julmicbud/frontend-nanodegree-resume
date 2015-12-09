@@ -8,7 +8,7 @@ var bio = {
 		"mobile" : "324-456-7656",
 		"email" : "julia@gmail.com",
 	},
-	"photo" : "images/my_picture.jpg",
+	"photo" : "images/fry.jpg",
 	"welcomeMessage" : "Hello World!",
 	"skills" : ["Everything!"],
 	}
@@ -27,10 +27,14 @@ var formattedEmail =
 
 var formattedBioPic =
 	HTMLbioPic.replace("%data%", bio.photo);
+	
+var formattedWelcomeMessage = 
+	HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 		
 $("#header").prepend(formattedRole);
 $("#header").prepend(formattedName);
 $("#topContacts").append(formattedMobile);
 $("#topContacts").append(formattedEmail);
 $("#header").append(formattedBioPic);
+$("#header").append(formattedWelcomeMessage);
 	
