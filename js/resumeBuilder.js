@@ -30,6 +30,9 @@ var formattedBioPic =
 	
 var formattedWelcomeMessage = 
 	HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+	
+var formattedSkills = 
+	HTMLskills.replace("%data%", bio.skills);
 		
 $("#header").prepend(formattedRole);
 $("#header").prepend(formattedName);
@@ -37,4 +40,4 @@ $("#topContacts").append(formattedMobile);
 $("#topContacts").append(formattedEmail);
 $("#header").append(formattedBioPic);
 $("#header").append(formattedWelcomeMessage);
-	
+$("#header").append(HTMLskillsStart + formattedSkills);	
