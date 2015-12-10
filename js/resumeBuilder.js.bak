@@ -65,7 +65,6 @@ var formattedWorkLocation =
 		HTMLworkLocation.replace("%data%", work.city);
 		
 $("#workExperience").append(HTMLworkStart + formattedWorkEmployer + formattedWorkTitle);
-$("#workExperience").append(formattedWorkTitle);
 $("#workExperience").append(formattedWorkDates);
 $("#workExperience").append(formattedWorkLocation);
 
@@ -76,4 +75,16 @@ var education ={};
 education["name"] = "University of Evansville";
 education["years"] = 4;
 education["city"] = "Evansville";
-	
+
+var formattedSchoolName = 
+		HTMLschoolName.replace("%data%", education["name"]);
+
+var formattedSchoolDates = 
+		HTMLschoolDates.replace("%data%", education["years"]);
+		
+var formattedSchoolLocation = 
+		HTMLschoolLocation.replace("%data%", education["city"]);
+		
+$("#education").append(HTMLschoolStart + formattedSchoolName);
+$("#education").append(formattedSchoolDates);
+$("#education").append(formattedSchoolLocation);
