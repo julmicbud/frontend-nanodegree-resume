@@ -1,6 +1,7 @@
 /*
 This is empty on purpose! Your code to build the resume will go here.
  */
+//Bio Information
 var bio = {
 	"name" : "Julia Hendrickson",
 	"role" : "  Graphic Designer and Web Developer",
@@ -40,4 +41,38 @@ $("#topContacts").append(formattedMobile);
 $("#topContacts").append(formattedEmail);
 $("#header").append(formattedBioPic);
 $("#header").append(formattedWelcomeMessage);
-$("#header").append(HTMLskillsStart + formattedSkills);	
+$("#header").append(HTMLskillsStart + formattedSkills);
+
+//work
+
+var work ={};
+
+work.position = "Photgraphy Coordinator";
+work.employer = "Sibcy Cline Realtors";
+work.yearsWorked = 5;
+work.city = "Cincinnati";
+
+var formattedWorkEmployer = 
+		HTMLworkEmployer.replace("%data%", work.employer);
+
+var formattedWorkTitle = 
+		HTMLworkTitle.replace("%data%", work.position);
+
+var formattedWorkDates = 
+		HTMLworkDates.replace("%data%", work.yearsWorked);
+		
+var formattedWorkLocation = 
+		HTMLworkLocation.replace("%data%", work.city);
+		
+$("#workExperience").append(HTMLworkStart + formattedWorkEmployer + formattedWorkTitle);
+$("#workExperience").append(formattedWorkDates);
+$("#workExperience").append(formattedWorkLocation);
+
+//Education
+
+var education ={};
+
+education["name"] = "University of Evansville";
+education["years"] = 4;
+education["city"] = "Evansville";
+	
