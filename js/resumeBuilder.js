@@ -66,7 +66,7 @@ var formattedWorkLocation =
 		
 $("#workExperience").append(HTMLworkStart + formattedWorkEmployer + formattedWorkTitle);
 $("#workExperience").append(formattedWorkDates);
-$("#workExperience").append(formattedWorkLocation);
+$("#workExperience").append(formattedWorkLocation + "</br>");
 
 //Education
 
@@ -87,4 +87,4 @@ var formattedSchoolLocation =
 		
 $("#education").append(HTMLschoolStart + formattedSchoolName);
 $("#education").append(formattedSchoolDates);
-$("#education").append(formattedSchoolLocation);
+$("#education").append(formattedSchoolLocation + "</br>");
