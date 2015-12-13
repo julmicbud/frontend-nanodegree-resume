@@ -6,10 +6,11 @@ var bio = {
 	"name" : "Julia Hendrickson",
 	"role" : "  Graphic Designer and Web Developer",
 	"contacts" : {
-		"mobile" : "324-456-7656",
+		"mobile" : "555-555-5555",
 		"email" : "julmicbud@gmail.com",
 	},
-	"photo" : "images/fry.jpg",
+	"twitter": "@julmicbud",
+	"photo" : "https://a3-images.myspacecdn.com/images03/20/b6d8a8f46c644ca99a4dfc662a8109f8/300x300.jpg",
 	"welcomeMessage" : "Hello World!",
 	"skills" : ["Everything!"],
 	}
@@ -25,6 +26,9 @@ var formattedMobile =
 
 var formattedEmail = 
 	HTMLemail.replace("%data%", bio.contacts.email);
+	
+var formattedTwitter =
+	HTMLtwitter.replace("%data%", bio.twitter);
 
 var formattedBioPic =
 	HTMLbioPic.replace("%data%", bio.photo);
@@ -39,6 +43,7 @@ $("#header").prepend(formattedRole);
 $("#header").prepend(formattedName);
 $("#topContacts").append(formattedMobile);
 $("#topContacts").append(formattedEmail);
+$("#topContacts").append(formattedTwitter);
 $("#header").append(formattedBioPic);
 $("#header").append(formattedWelcomeMessage);
 $("#header").append(HTMLskillsStart + formattedSkills);
@@ -56,7 +61,7 @@ var work ={
 	},
 	{
 		"title": "Marketing Representative",
-		"description": " - Created direct mail pieces for agents - Work directly with agents in creating design pieces and setting up a marketing plan - Work with builders in creating marketing pieces - Produce and submit ads in multiple publications"
+		"description": " - Created direct mail pieces for agents</br> - Work directly with agents in creating design pieces and setting up a marketing plan</br> - Work with builders in creating marketing pieces</br> - Produce and submit ads in multiple publications"
 	},
 	{
 		"title": "Marketing Assistant",
@@ -83,6 +88,15 @@ $("#workExperience").append(HTMLworkStart);
 $(".work-entry").append(formattedWorkEmployer + formattedWorkTitle);
 $(".work-entry").append(formattedWorkDates);
 $(".work-entry").append(formattedWorkLocation)
+$(".work-entry").append(formattedWorkDescription + "</br>" + "</br>");
+
+var formattedWorkTitle = 
+		HTMLworkTitle.replace(" - %data%", work.jobs[1].title);
+			
+var formattedWorkDescription = 
+		HTMLworkDescription.replace("%data%", work.jobs[1].description);	
+		
+$(".work-entry").append(formattedWorkTitle);
 $(".work-entry").append(formattedWorkDescription + "</br>");
 
 //Education
