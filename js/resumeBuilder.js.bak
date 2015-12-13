@@ -76,7 +76,9 @@ var education ={
 		"name": "University of Evansville",
 		"city": "Evansville, IN",
 		"degree": "BS",
-		"Major": ["Visual Communications", "Mass Communications"]
+		"major": "Visual Communications", 
+		"minor": "Mass Communications",
+		"dates": 2006
 		},
 	{
 		"name": "University of Cincinnati",
@@ -87,13 +89,13 @@ var education ={
 	};
 
 var formattedSchoolName = 
-		HTMLschoolName.replace("%data%", education.name0);
+		HTMLschoolName.replace("%data%", education.schools[0].name);
 
 var formattedSchoolDates = 
-		HTMLschoolDates.replace("%data%", education["years"]);
+		HTMLschoolDates.replace("%data%", education.schools[0].dates);
 		
 var formattedSchoolLocation = 
-		HTMLschoolLocation.replace("%data%", education["city"]);
+		HTMLschoolLocation.replace("%data%", education.schools[0].city);
 		
 $("#education").append(HTMLschoolStart + formattedSchoolName);
 $("#education").append(formattedSchoolDates);
