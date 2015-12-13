@@ -70,14 +70,24 @@ $("#workExperience").append(formattedWorkLocation + "</br>");
 
 //Education
 
-var education ={};
-
-education["name"] = "University of Evansville";
-education["years"] = 4;
-education["city"] = "Evansville";
+var education ={
+	"schools":[
+	{
+		"name": "University of Evansville",
+		"city": "Evansville, IN",
+		"degree": "BS",
+		"Major": ["Visual Communications", "Mass Communications"]
+		},
+	{
+		"name": "University of Cincinnati",
+		"city": "Cincinnati, OH",
+		"degree": "Certificate for Social Media in Business"
+	}
+	]
+	};
 
 var formattedSchoolName = 
-		HTMLschoolName.replace("%data%", education["name"]);
+		HTMLschoolName.replace("%data%", education.name);
 
 var formattedSchoolDates = 
 		HTMLschoolDates.replace("%data%", education["years"]);
