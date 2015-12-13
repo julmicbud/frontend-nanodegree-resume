@@ -52,39 +52,15 @@ var work ={
 		"title": "Photography Coordinator",
 		"location": "Cincinnati, OH",
 		"dates": "2006 - Present",
-		"description": " • Routing and scheduling 50-60  
-   photography appointments daily
-• Managing seven full-time photographers 
-   daily activities
-• Editing photos using Photoshop
-
-• Working directly with agents to meet their 
-   photo marketing needs
-• Photographing listings and working with 
-   home owners to maximize their homes potential
-"
+		"description": " - Routing and scheduling 50-60 photography appointments daily - Managing seven full-time photographers daily activities - Editing photos using Photoshop - Working directly with agents to meet their photo marketing needs - Photographing listings and working with home owners to maximize their homes potential"
 	},
 	{
 		"title": "Marketing Representative",
-		"description": "	• Created direct mail pieces for agents
-• Work directly with agents in creating design
-   pieces and setting up a marketing plan
-• Work with builders in creating marketing pieces
-• Produce and submit ads in multiple publications
-"
+		"description": " - Created direct mail pieces for agents - Work directly with agents in creating design pieces and setting up a marketing plan - Work with builders in creating marketing pieces - Produce and submit ads in multiple publications"
 	},
 	{
 		"title": "Marketing Assistant",
-		"description": "• Assisted marketing representatives with 
-  agent projects	
-• Designed postcards and other print piece 
-  for builders
-• Create builder presentation interactive media
-• Produce pieces all the way through the print process
-• Assist in producing and submitting ads in 
-   multiple publications
-• Created portions of the listing magazine
-"
+		"description": " - Assisted marketing representatives with agent projects	- Designed postcards and other print piece for builders - Create builder presentation interactive media - Produce pieces all the way through the print process - Assist in producing and submitting ads in multiple publications - Created portions of the listing magazine"
 	}
 	]};
 
@@ -92,17 +68,18 @@ var formattedWorkEmployer =
 		HTMLworkEmployer.replace("%data%", work.jobs[0].employer);
 
 var formattedWorkTitle = 
-		HTMLworkTitle.replace("%data%", work.position);
+		HTMLworkTitle.replace("%data%", work.jobs[0].title);
 
 var formattedWorkDates = 
-		HTMLworkDates.replace("%data%", work.yearsWorked);
+		HTMLworkDates.replace("%data%", work.jobs[0].dates);
 		
 var formattedWorkLocation = 
-		HTMLworkLocation.replace("%data%", work.city);
+		HTMLworkLocation.replace("%data%", work.jobs[0].location);
 		
-$("#workExperience").append(HTMLworkStart + formattedWorkEmployer + formattedWorkTitle);
-$("#workExperience").append(formattedWorkDates);
-$("#workExperience").append(formattedWorkLocation + "</br>");
+$("#workExperience").append(HTMLworkStart); 
+$(".work-entry").append(formattedWorkEmployer + formattedWorkTitle);
+$(".work-entry").append(formattedWorkDates);
+$(".work-entry").append(formattedWorkLocation + "</br>");
 
 //Education
 
