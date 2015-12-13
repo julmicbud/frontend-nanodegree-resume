@@ -7,7 +7,7 @@ var bio = {
 	"role" : "  Graphic Designer and Web Developer",
 	"contacts" : {
 		"mobile" : "324-456-7656",
-		"email" : "julia@gmail.com",
+		"email" : "julmicbud@gmail.com",
 	},
 	"photo" : "images/fry.jpg",
 	"welcomeMessage" : "Hello World!",
@@ -52,7 +52,7 @@ var work ={
 		"title": "Photography Coordinator",
 		"location": "Cincinnati, OH",
 		"dates": "2006 - Present",
-		"description": " - Routing and scheduling 50-60 photography appointments daily - Managing seven full-time photographers daily activities - Editing photos using Photoshop - Working directly with agents to meet their photo marketing needs - Photographing listings and working with home owners to maximize their homes potential"
+		"description": " - Routing and scheduling 50-60 photography appointments daily</br>- Managing seven full-time photographers daily activities </br>- Editing photos using Photoshop</br>- Working directly with agents to meet their photo marketing needs</br>- Photographing listings and working with home owners to maximize their homes potential"
 	},
 	{
 		"title": "Marketing Representative",
@@ -60,7 +60,7 @@ var work ={
 	},
 	{
 		"title": "Marketing Assistant",
-		"description": " - Assisted marketing representatives with agent projects	- Designed postcards and other print piece for builders - Create builder presentation interactive media - Produce pieces all the way through the print process - Assist in producing and submitting ads in multiple publications - Created portions of the listing magazine"
+		"description": " - Assisted marketing representatives with agent projects	</br> - Designed postcards and other print piece for builders - Create builder presentation interactive media - Produce pieces all the way through the print process - Assist in producing and submitting ads in multiple publications - Created portions of the listing magazine"
 	}
 	]};
 
@@ -75,11 +75,15 @@ var formattedWorkDates =
 		
 var formattedWorkLocation = 
 		HTMLworkLocation.replace("%data%", work.jobs[0].location);
+	
+var formattedWorkDescription = 
+		HTMLworkDescription.replace("%data%", work.jobs[0].description);	
 		
 $("#workExperience").append(HTMLworkStart); 
 $(".work-entry").append(formattedWorkEmployer + formattedWorkTitle);
 $(".work-entry").append(formattedWorkDates);
-$(".work-entry").append(formattedWorkLocation + "</br>");
+$(".work-entry").append(formattedWorkLocation)
+$(".work-entry").append(formattedWorkDescription + "</br>");
 
 //Education
 
@@ -96,7 +100,8 @@ var education ={
 	{
 		"name": "University of Cincinnati",
 		"city": "Cincinnati, OH",
-		"degree": "Certificate for Social Media in Business"
+		"degree": "Social Media for Business Certification",
+		"dates": "2012"
 	}
 	]
 	};

@@ -7,7 +7,7 @@ var bio = {
 	"role" : "  Graphic Designer and Web Developer",
 	"contacts" : {
 		"mobile" : "324-456-7656",
-		"email" : "julia@gmail.com",
+		"email" : "julmicbud@gmail.com",
 	},
 	"photo" : "images/fry.jpg",
 	"welcomeMessage" : "Hello World!",
@@ -75,11 +75,15 @@ var formattedWorkDates =
 		
 var formattedWorkLocation = 
 		HTMLworkLocation.replace("%data%", work.jobs[0].location);
+	
+var formattedWorkDescription = 
+		HTMLworkDescription.replace("%data%", work.jobs[0].description);	
 		
 $("#workExperience").append(HTMLworkStart); 
 $(".work-entry").append(formattedWorkEmployer + formattedWorkTitle);
 $(".work-entry").append(formattedWorkDates);
-$(".work-entry").append(formattedWorkLocation + "</br>");
+$(".work-entry").append(formattedWorkLocation)
+$(".work-entry").append(formattedWorkDescription + "</br>");
 
 //Education
 
@@ -96,7 +100,8 @@ var education ={
 	{
 		"name": "University of Cincinnati",
 		"city": "Cincinnati, OH",
-		"degree": "Certificate for Social Media in Business"
+		"degree": "Social Media for Business Certification",
+		"dates": "2012"
 	}
 	]
 	};
@@ -125,5 +130,5 @@ var formattedSchoolLocation =
 		HTMLschoolLocation.replace("%data%", education.schools[1].city);
 		
 $(".education-entry").append(formattedSchoolName);
-$("#education").append(formattedSchoolDates);
-$("#education").append(formattedSchoolLocation + "</br>");
+$(".education-entry").append(formattedSchoolDates);
+$(".education-entry").append(formattedSchoolLocation + "</br>");
