@@ -79,7 +79,7 @@ var formattedWorkLocation =
 $("#workExperience").append(HTMLworkStart); 
 $(".work-entry").append(formattedWorkEmployer + formattedWorkTitle);
 $(".work-entry").append(formattedWorkDates);
-$("#workExperience").append(formattedWorkLocation + "</br>");
+$(".work-entry").append(formattedWorkLocation + "</br>");
 
 //Education
 
@@ -110,9 +110,10 @@ var formattedSchoolDates =
 var formattedSchoolLocation = 
 		HTMLschoolLocation.replace("%data%", education.schools[0].city);
 		
-$("#education").append(HTMLschoolStart + formattedSchoolName);
-$("#education").append(formattedSchoolDates);
-$("#education").append(formattedSchoolLocation + "</br>");
+$("#education").append(HTMLschoolStart);
+$(".education-entry").append(formattedSchoolName);
+$(".education-entry").append(formattedSchoolDates);
+$(".education-entry").append(formattedSchoolLocation + "</br>");
 
 var formattedSchoolName = 
 		HTMLschoolName.replace("%data%", education.schools[1].name);
@@ -123,6 +124,6 @@ var formattedSchoolDates =
 var formattedSchoolLocation = 
 		HTMLschoolLocation.replace("%data%", education.schools[1].city);
 		
-$("#education").append(HTMLschoolStart + formattedSchoolName);
+$(".education-entry").append(formattedSchoolName);
 $("#education").append(formattedSchoolDates);
 $("#education").append(formattedSchoolLocation + "</br>");
