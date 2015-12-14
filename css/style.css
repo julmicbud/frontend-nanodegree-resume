@@ -168,6 +168,13 @@ span {
   text-align: center;
 }
 
+#skills {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+}
+
+
 /* Media queries to handle various device widths */
 
 @media only screen and (max-width: 1024px) {

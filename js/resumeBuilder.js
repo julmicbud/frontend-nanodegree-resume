@@ -14,7 +14,7 @@ var bio = {
 	"website": "www.julmicbud.com",
 	"photo" : "https://a3-images.myspacecdn.com/images03/20/b6d8a8f46c644ca99a4dfc662a8109f8/300x300.jpg",
 	"welcomeMessage" : "Hello and welcome to my resume. Feel free to look around and let me know if you have any questions.",
-	"skills" :["HTML5", "CSS","Javascript","JQuery","Photoshop","Illustrator","Indesign","Excel","Word","PowerPoint"],
+	"skills" :["HTML5", "CSS","Javascript","JQuery","Photoshop","Illustrator","Indesign"],
 	};
 bio.display = function() {
 	var formattedName = HTMLheaderName.replace("%data%", bio.name);
@@ -30,6 +30,7 @@ bio.display = function() {
 	var formattedTwitter =	HTMLtwitter.replace("%data%", bio.twitter);
 	var formattedGithub = HTMLgithub.replace ("%data%", bio.github);
 	$("#topContacts").append(formattedMobile).append(formattedEmail).append(formattedTwitter).append(formattedGithub);
+	$("#footerContacts").append(formattedMobile).append(formattedEmail).append(formattedTwitter).append(formattedGithub);
 
 	for(skill in bio.skills) {
 		var formattedSkills = HTMLskills.replace("%data%",bio.skills[skill]);
