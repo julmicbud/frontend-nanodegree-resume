@@ -37,6 +37,7 @@ bio.display = function() {
 		$("#skills").append(formattedSkills);
 	};
 };
+
 //work
 
 var work ={
@@ -55,9 +56,17 @@ var work ={
 	{
 		"title": "Marketing Assistant",
 		"description": " - Assisted marketing representatives with agent projects	</br> - Designed postcards and other print piece for builders - Create builder presentation interactive media - Produce pieces all the way through the print process - Assist in producing and submitting ads in multiple publications - Created portions of the listing magazine"
+	},
+	{
+		"employer": "Bethesda School of Nursting inc., Alumni Association",
+		"title": "Freelance Web Design",
+		"location": "Cincinnati, OH",
+		"dates": "2007-2008",
+		"description": "- Updated design and structure of website</br>- Maintain and update website monthly",
 	}
 	]};
 
+work.display = function() {
 var formattedWorkEmployer = 
 		HTMLworkEmployer.replace("%data%", work.jobs[0].employer);
 
@@ -87,7 +96,7 @@ var formattedWorkDescription =
 		
 $(".work-entry").append(formattedWorkTitle);
 $(".work-entry").append(formattedWorkDescription + "</br>");
-
+};
 //Education
 
 var education ={
@@ -137,3 +146,4 @@ $(".education-entry").append(formattedSchoolDates);
 $(".education-entry").append(formattedSchoolLocation + "</br>");
 
 bio.display();
+work.display();
