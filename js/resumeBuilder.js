@@ -67,36 +67,67 @@ var work ={
 	]};
 
 work.display = function() {
-var formattedWorkEmployer = 
-		HTMLworkEmployer.replace("%data%", work.jobs[0].employer);
-
-var formattedWorkTitle = 
-		HTMLworkTitle.replace("%data%", work.jobs[0].title);
-
-var formattedWorkDates = 
-		HTMLworkDates.replace("%data%", work.jobs[0].dates);
-		
-var formattedWorkLocation = 
-		HTMLworkLocation.replace("%data%", work.jobs[0].location);
-	
-var formattedWorkDescription = 
-		HTMLworkDescription.replace("%data%", work.jobs[0].description);	
+	var formattedWorkEmployer = HTMLworkEmployer.replace("%data%", work.jobs[0].employer);
+	var formattedWorkTitle = HTMLworkTitle.replace("%data%", work.jobs[0].title);
+	var formattedWorkDates = HTMLworkDates.replace("%data%", work.jobs[0].dates);
+	var formattedWorkLocation = HTMLworkLocation.replace("%data%", work.jobs[0].location);
+	var formattedWorkDescription = HTMLworkDescription.replace("%data%", work.jobs[0].description);	
 		
 $("#workExperience").append(HTMLworkStart); 
-$(".work-entry").append(formattedWorkEmployer + formattedWorkTitle);
-$(".work-entry").append(formattedWorkDates);
-$(".work-entry").append(formattedWorkLocation)
-$(".work-entry").append(formattedWorkDescription + "</br>" + "</br>");
+$(".work-entry").append(formattedWorkEmployer + formattedWorkTitle).append(formattedWorkDates).append(formattedWorkLocation).append(formattedWorkDescription + "</br>" + "</br>");
 
-var formattedWorkTitle = 
-		HTMLworkTitle.replace(" - %data%", work.jobs[1].title);
+var formattedWorkTitle = HTMLworkTitle.replace(" - %data%", work.jobs[1].title);
 			
-var formattedWorkDescription = 
-		HTMLworkDescription.replace("%data%", work.jobs[1].description);	
+var formattedWorkDescription = HTMLworkDescription.replace("%data%", work.jobs[1].description);	
 		
 $(".work-entry").append(formattedWorkTitle);
 $(".work-entry").append(formattedWorkDescription + "</br>");
+
+var formattedWorkTitle = HTMLworkTitle.replace(" - %data%", work.jobs[2].title);
+			
+var formattedWorkDescription = HTMLworkDescription.replace("%data%", work.jobs[2].description);	
+		
+$(".work-entry").append(formattedWorkTitle);
+$(".work-entry").append(formattedWorkDescription + "</br>");
+
+var formattedWorkEmployer = HTMLworkEmployer.replace("%data%", work.jobs[3].employer);
+	var formattedWorkTitle = HTMLworkTitle.replace("%data%", work.jobs[3].title);
+	var formattedWorkDates = HTMLworkDates.replace("%data%", work.jobs[3].dates);
+	var formattedWorkLocation = HTMLworkLocation.replace("%data%", work.jobs[3].location);
+	var formattedWorkDescription = HTMLworkDescription.replace("%data%", work.jobs[3].description);	
+		
+$(".work-entry").append(formattedWorkEmployer + formattedWorkTitle).append(formattedWorkDates).append(formattedWorkLocation).append(formattedWorkDescription + "</br>" + "</br>");
+
+
 };
+
+//projects
+
+var projects ={
+	"project":[
+	{
+		"title": "Wedding Invitation",
+		"dates": 2011,
+		"description":"A wedding invitation I created by only being told the wedding colors and the wedding was going to be very eclectic. They ended up loving this design.",
+		"images": {"images/Lyndsayinvite350x225.jpg"}
+		},
+	{
+		"title": "Postcard",
+		"dates": 2012,
+		"description":"A postcard created as a promotional piece for an art fair.",
+		"images": {"images/Summerfair2-350x225.jpg"}
+	},
+	{
+		"title": "Baby Shower invitation",
+		"dates": 2014,
+		"description":"An invitation created for a baby shower",
+		"images": {"images/babyShowerbutton350x225"}
+	}
+	}
+	]
+}
+
+
 //Education
 
 var education ={
