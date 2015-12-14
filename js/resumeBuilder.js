@@ -104,28 +104,43 @@ $(".work-entry").append(formattedWorkEmployer + formattedWorkTitle).append(forma
 //projects
 
 var projects ={
-	"project":[
-	{
+	"pro":[{
 		"title": "Wedding Invitation",
 		"dates": 2011,
-		"description":"A wedding invitation I created by only being told the wedding colors and the wedding was going to be very eclectic. They ended up loving this design.",
-		"images": {"images/Lyndsayinvite350x225.jpg"}
+		"description": "A wedding invitation I created by only being told the wedding colors and the wedding was going to be very eclectic. They ended up loving this design.",
+		"images": "images/Lyndsayinvite350x225.jpg"
 		},
 	{
 		"title": "Postcard",
 		"dates": 2012,
 		"description":"A postcard created as a promotional piece for an art fair.",
-		"images": {"images/Summerfair2-350x225.jpg"}
+		"images": "images/Summerfair2-350x225.jpg"
 	},
 	{
 		"title": "Baby Shower invitation",
 		"dates": 2014,
 		"description":"An invitation created for a baby shower",
-		"images": {"images/babyShowerbutton350x225"}
-	}
+		"images": "images/babyShowerbutton350x225"
 	}
 	]
-}
+};
+
+projects.display = function() {
+	var formattedProjectTitle = 
+		HTMLprojectTitle.replace("%data%", projects.pro[0].title);
+		
+	var formattedProjectDates = 
+		HTMLprojectDates.replace("%data%", projects.pro[0].dates);
+	
+	var formattedProjectDescription = 
+		HTMLprojectDescription.replace("%data%", projects.pro[0].description);
+		
+	var formattedProjectImage = 
+		HTMLprojectImage.replace("%data%", projects.pro[0].images);
+	
+	$("#projects").append(HTMLprojectStart);
+	$(".project-entry").append(formattedProjectTitle).append(formattedProjectDates).append(formattedProjectDescription).append(formattedProjectImage + "</br>");
+};
 
 
 //Education
@@ -178,3 +193,4 @@ $(".education-entry").append(formattedSchoolLocation + "</br>");
 
 bio.display();
 work.display();
+projects.display();
