@@ -14,7 +14,7 @@ var bio = {
 	"website": "www.julmicbud.com",
 	"photo" : "https://a3-images.myspacecdn.com/images03/20/b6d8a8f46c644ca99a4dfc662a8109f8/300x300.jpg",
 	"welcomeMessage" : "Hello and welcome to my resume. Feel free to look around and let me know if you have any questions.",
-	"skills" :["excel","word"],
+	"skills" :["HTML5", "CSS","Javascript","JQuery","Photoshop","Illustrator","Indesign","Excel","Word","PowerPoint"],
 	};
 bio.display = function() {
 	var formattedName = HTMLheaderName.replace("%data%", bio.name);
