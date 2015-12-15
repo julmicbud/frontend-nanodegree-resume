@@ -125,7 +125,7 @@ var projects ={
 	]
 };
 
-//project.display = function() {
+projects.display = function() {
 	var formattedProjectTitle = 
 		HTMLprojectTitle.replace("%data%", projects.pro[0].title);
 		
@@ -140,7 +140,7 @@ var projects ={
 	
 	$("#projects").append(HTMLprojectStart);
 	$(".project-entry").append(formattedProjectTitle).append(formattedProjectDates).append(formattedProjectDescription).append(formattedProjectImage + "</br>");
-//};
+};
 
 
 //Education
@@ -193,4 +193,4 @@ $(".education-entry").append(formattedSchoolLocation + "</br>");
 
 bio.display();
 work.display();
-//project.display();
+projects.display();
