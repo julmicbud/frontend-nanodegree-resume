@@ -116,7 +116,7 @@ var projects ={
 		"title": "Baby Shower invitation",
 		"dates": 2014,
 		"description":"An invitation created for a baby shower",
-		"images": "images/babyShowerbutton350x225"
+		"images": "images/babyShowerbutton350x225.jpg"
 	}
 	]
 };
@@ -148,6 +148,20 @@ projects.display = function() {
 		
 	var formattedProjectImage = 
 		HTMLprojectImage.replace("%data%", projects.pro[1].images);
+	
+	$(".project-entry").append(formattedProjectTitle).append(formattedProjectDates).append(formattedProjectDescription).append(formattedProjectImage + "</br>");
+
+	var formattedProjectTitle = 
+		HTMLprojectTitle.replace("%data%", projects.pro[2].title);
+		
+	var formattedProjectDates = 
+		HTMLprojectDates.replace("%data%", projects.pro[2].dates);
+	
+	var formattedProjectDescription = 
+		HTMLprojectDescription.replace("%data%", projects.pro[2].description);
+		
+	var formattedProjectImage = 
+		HTMLprojectImage.replace("%data%", projects.pro[2].images);
 	
 	$(".project-entry").append(formattedProjectTitle).append(formattedProjectDates).append(formattedProjectDescription).append(formattedProjectImage + "</br>");
 };

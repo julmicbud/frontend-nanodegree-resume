@@ -73,32 +73,28 @@ work.display = function() {
 	var formattedWorkLocation = HTMLworkLocation.replace("%data%", work.jobs[0].location);
 	var formattedWorkDescription = HTMLworkDescription.replace("%data%", work.jobs[0].description);	
 		
-$("#workExperience").append(HTMLworkStart); 
-$(".work-entry").append(formattedWorkEmployer + formattedWorkTitle).append(formattedWorkDates).append(formattedWorkLocation).append(formattedWorkDescription + "</br>" + "</br>");
-
-var formattedWorkTitle = HTMLworkTitle.replace(" - %data%", work.jobs[1].title);
-			
-var formattedWorkDescription = HTMLworkDescription.replace("%data%", work.jobs[1].description);	
+		$("#workExperience").append(HTMLworkStart); 
+		$(".work-entry").append(formattedWorkEmployer + formattedWorkTitle).append(formattedWorkDates).append(formattedWorkLocation).append(formattedWorkDescription + "</br>" + "</br>");
 		
-$(".work-entry").append(formattedWorkTitle);
-$(".work-entry").append(formattedWorkDescription + "</br>");
-
-var formattedWorkTitle = HTMLworkTitle.replace(" - %data%", work.jobs[2].title);
-			
-var formattedWorkDescription = HTMLworkDescription.replace("%data%", work.jobs[2].description);	
+	var formattedWorkTitle = HTMLworkTitle.replace(" - %data%", work.jobs[1].title);
+	var formattedWorkDescription = HTMLworkDescription.replace("%data%", work.jobs[1].description);	
 		
-$(".work-entry").append(formattedWorkTitle);
-$(".work-entry").append(formattedWorkDescription + "</br>");
+		$(".work-entry").append(formattedWorkTitle);
+		$(".work-entry").append(formattedWorkDescription + "</br>");
 
-var formattedWorkEmployer = HTMLworkEmployer.replace("%data%", work.jobs[3].employer);
+	var formattedWorkTitle = HTMLworkTitle.replace(" - %data%", work.jobs[2].title);
+	var formattedWorkDescription = HTMLworkDescription.replace("%data%", work.jobs[2].description);	
+		
+		$(".work-entry").append(formattedWorkTitle);
+		$(".work-entry").append(formattedWorkDescription + "</br>");
+
+	var formattedWorkEmployer = HTMLworkEmployer.replace("%data%", work.jobs[3].employer);
 	var formattedWorkTitle = HTMLworkTitle.replace("%data%", work.jobs[3].title);
 	var formattedWorkDates = HTMLworkDates.replace("%data%", work.jobs[3].dates);
 	var formattedWorkLocation = HTMLworkLocation.replace("%data%", work.jobs[3].location);
 	var formattedWorkDescription = HTMLworkDescription.replace("%data%", work.jobs[3].description);	
 		
-$(".work-entry").append(formattedWorkEmployer + formattedWorkTitle).append(formattedWorkDates).append(formattedWorkLocation).append(formattedWorkDescription + "</br>" + "</br>");
-
-
+		$(".work-entry").append(formattedWorkEmployer + formattedWorkTitle).append(formattedWorkDates).append(formattedWorkLocation).append(formattedWorkDescription + "</br>" + "</br>");
 };
 
 //projects
@@ -139,6 +135,34 @@ projects.display = function() {
 		HTMLprojectImage.replace("%data%", projects.pro[0].images);
 	
 	$("#projects").append(HTMLprojectStart);
+	$(".project-entry").append(formattedProjectTitle).append(formattedProjectDates).append(formattedProjectDescription).append(formattedProjectImage + "</br>");
+
+	var formattedProjectTitle = 
+		HTMLprojectTitle.replace("%data%", projects.pro[1].title);
+		
+	var formattedProjectDates = 
+		HTMLprojectDates.replace("%data%", projects.pro[1].dates);
+	
+	var formattedProjectDescription = 
+		HTMLprojectDescription.replace("%data%", projects.pro[1].description);
+		
+	var formattedProjectImage = 
+		HTMLprojectImage.replace("%data%", projects.pro[1].images);
+	
+	$(".project-entry").append(formattedProjectTitle).append(formattedProjectDates).append(formattedProjectDescription).append(formattedProjectImage + "</br>");
+
+var formattedProjectTitle = 
+		HTMLprojectTitle.replace("%data%", projects.pro[2].title);
+		
+	var formattedProjectDates = 
+		HTMLprojectDates.replace("%data%", projects.pro[2].dates);
+	
+	var formattedProjectDescription = 
+		HTMLprojectDescription.replace("%data%", projects.pro[2].description);
+		
+	var formattedProjectImage = 
+		HTMLprojectImage.replace("%data%", projects.pro[2].images);
+	
 	$(".project-entry").append(formattedProjectTitle).append(formattedProjectDates).append(formattedProjectDescription).append(formattedProjectImage + "</br>");
 };
 
