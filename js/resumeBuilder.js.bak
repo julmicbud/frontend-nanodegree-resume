@@ -116,7 +116,7 @@ var projects ={
 		"title": "Baby Shower invitation",
 		"dates": 2014,
 		"description":"An invitation created for a baby shower",
-		"images": "images/babyShowerbutton350x225"
+		"images": "images/babyShowerbutton350x225.jpg"
 	}
 	]
 };
@@ -151,7 +151,7 @@ projects.display = function() {
 	
 	$(".project-entry").append(formattedProjectTitle).append(formattedProjectDates).append(formattedProjectDescription).append(formattedProjectImage + "</br>");
 
-var formattedProjectTitle = 
+	var formattedProjectTitle = 
 		HTMLprojectTitle.replace("%data%", projects.pro[2].title);
 		
 	var formattedProjectDates = 
