@@ -185,6 +185,20 @@ var education ={
 		"degree": "Social Media for Business Certification",
 		"dates": "2012"
 	}
+	],
+	"onlineCourses":[
+	{
+		"title": "Responsive Web Design Fundamentals",
+		"school": "Udacity",
+		"dates": 2015,
+		"url": "www.udacity.com"
+	},
+	{
+		"title": "JavaScript Basics",
+		"school": "Udacity",
+		"dates": 2015,
+		"url": "www.udacity.com",
+	}
 	]
 	};
 

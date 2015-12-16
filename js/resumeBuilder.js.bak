@@ -8,9 +8,9 @@ var bio = {
 	"contacts" : {
 		"mobile" : "555-555-5555",
 		"email" : "julmicbud@gmail.com",
+		"twitter": "@julmicbud",
+		"github": "julmicbud",
 	},
-	"twitter": "@julmicbud",
-	"github": "julmicbud",
 	"website": "www.julmicbud.com",
 	"photo" : "https://a3-images.myspacecdn.com/images03/20/b6d8a8f46c644ca99a4dfc662a8109f8/300x300.jpg",
 	"welcomeMessage" : "Hello and welcome to my resume. Feel free to look around and let me know if you have any questions.",
@@ -27,8 +27,8 @@ bio.display = function() {
 	
 	var formattedMobile =	HTMLmobile.replace("%data%", bio.contacts.mobile);
 	var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
-	var formattedTwitter =	HTMLtwitter.replace("%data%", bio.twitter);
-	var formattedGithub = HTMLgithub.replace ("%data%", bio.github);
+	var formattedTwitter =	HTMLtwitter.replace("%data%", bio.contacts.twitter);
+	var formattedGithub = HTMLgithub.replace ("%data%", bio.contacts.github);
 	$("#topContacts").append(formattedMobile).append(formattedEmail).append(formattedTwitter).append(formattedGithub);
 	$("#footerContacts").append(formattedMobile).append(formattedEmail).append(formattedTwitter).append(formattedGithub);
 
