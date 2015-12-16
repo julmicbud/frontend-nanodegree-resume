@@ -197,7 +197,7 @@ var education ={
 		"title": "JavaScript Basics",
 		"school": "Udacity",
 		"dates": 2015,
-		"url": "htt://www.udacity.com",
+		"url": "http://www.udacity.com",
 	}
 	]
 	};

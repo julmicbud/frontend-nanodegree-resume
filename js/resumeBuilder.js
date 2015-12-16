@@ -220,8 +220,11 @@ education.display = function() {
 		
 	var formattedSchoolMinor =
 		HTMLschoolMajor.replace("Major: %data%", "Minor: " + education.schools[0].minor);	
-		
+
+	if (education.schools.length > 0) {
 		$("#education").append(HTMLschoolStart);
+	}
+
 		$(".education-entry:last").append(formattedSchoolName + formattedSchoolDegree).append(formattedSchoolDates).append(formattedSchoolLocation).append(formattedSchoolMajor).append(formattedSchoolMinor + "</br>");
 
 	var formattedSchoolName = 
