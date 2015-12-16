@@ -182,39 +182,72 @@ var education ={
 	{
 		"name": "University of Cincinnati",
 		"city": "Cincinnati, OH",
-		"degree": "Social Media for Business Certification",
+		"certificate": "Social Media for Business Certification",
 		"dates": "2012"
+	}
+	],
+	"onlineCourses":[
+	{
+		"title": "Responsive Web Design Fundamentals",
+		"school": "Udacity",
+		"dates": 2015,
+		"url": "www.udacity.com"
+	},
+	{
+		"title": "JavaScript Basics",
+		"school": "Udacity",
+		"dates": 2015,
+		"url": "www.udacity.com",
 	}
 	]
 	};
-
-var formattedSchoolName = 
+education.display = function() {
+	
+	var formattedSchoolName = 
 		HTMLschoolName.replace("%data%", education.schools[0].name);
 
-var formattedSchoolDates = 
+	var formattedSchoolDates = 
 		HTMLschoolDates.replace("%data%", education.schools[0].dates);
 		
-var formattedSchoolLocation = 
+	var formattedSchoolLocation = 
 		HTMLschoolLocation.replace("%data%", education.schools[0].city);
+	
+	var formattedSchoolDegree =
+		HTMLschoolDegree.replace("%data%", education.schools[0].degree);
+	
+	var formattedSchoolMajor =
+		HTMLschoolMajor.replace("%data%", education.schools[0].major);
 		
-$("#education").append(HTMLschoolStart);
-$(".education-entry").append(formattedSchoolName);
-$(".education-entry").append(formattedSchoolDates);
-$(".education-entry").append(formattedSchoolLocation + "</br>");
+	var formattedSchoolMinor =
+		HTMLschoolMajor.replace("Major: %data%", "Minor: " + education.schools[0].minor);	
+		
+		$("#education").append(HTMLschoolStart);
+		$(".education-entry").append(formattedSchoolName + formattedSchoolDegree).append(formattedSchoolDates).append(formattedSchoolLocation).append(formattedSchoolMajor).append(formattedSchoolMinor + "</br>");
 
-var formattedSchoolName = 
+	var formattedSchoolName = 
 		HTMLschoolName.replace("%data%", education.schools[1].name);
 
-var formattedSchoolDates = 
+	var formattedSchoolDates = 
 		HTMLschoolDates.replace("%data%", education.schools[1].dates);
 		
-var formattedSchoolLocation = 
+	var formattedSchoolLocation = 
 		HTMLschoolLocation.replace("%data%", education.schools[1].city);
 		
-$(".education-entry").append(formattedSchoolName);
-$(".education-entry").append(formattedSchoolDates);
-$(".education-entry").append(formattedSchoolLocation + "</br>");
+	var formattedSchoolCertification =
+		HTMLschoolMajor.replace("Major: %data%", education.schools[1].certificate);	
+
+		
+		$(".education-entry").append(formattedSchoolName);
+		$(".education-entry").append(formattedSchoolDates).append(formattedSchoolLocation).append(formattedSchoolCertification + "</br>");
+				
+		var formattedOnlineTitle =
+			HTMLonlineTitle.replace("%data%", education.onlineCourses[0].title);
+		
+		$("#education").append("</br>" + HTMLonlineClasses);
+		$(".education-entry:last").append(formattedOnlineTitle);	
+};
 
 bio.display();
 work.display();
 projects.display();
+education.display();
