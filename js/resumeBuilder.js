@@ -261,3 +261,11 @@ education.display = function() {
 bio.display();
 projects.display();
 education.display();
+
+
+$(document).click(function(loc){
+	var x = loc.pageX;
+	var y = loc.pageY;
+	
+	logClicks(x,y);
+});
