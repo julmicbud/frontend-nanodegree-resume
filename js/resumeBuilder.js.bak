@@ -23,8 +23,9 @@ bio.display = function() {
 	var formattedWelcomeMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 	
 	$("#header").prepend(formattedRole).prepend(formattedName).append(formattedBioPic + formattedWelcomeMessage);	
-	$("#header").append(HTMLskillsStart); 
-	
+	if(bio.skills.length > 0){
+		$("#header").append(HTMLskillsStart); 
+	}
 	var formattedMobile =	HTMLmobile.replace("%data%", bio.contacts.mobile);
 	var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
 	var formattedTwitter =	HTMLtwitter.replace("%data%", bio.contacts.twitter);
@@ -220,8 +221,11 @@ education.display = function() {
 		
 	var formattedSchoolMinor =
 		HTMLschoolMajor.replace("Major: %data%", "Minor: " + education.schools[0].minor);	
-		
+
+	if (education.schools.length > 0) {
 		$("#education").append(HTMLschoolStart);
+	}
+
 		$(".education-entry:last").append(formattedSchoolName + formattedSchoolDegree).append(formattedSchoolDates).append(formattedSchoolLocation).append(formattedSchoolMajor).append(formattedSchoolMinor + "</br>");
 
 	var formattedSchoolName = 
