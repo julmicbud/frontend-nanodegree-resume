@@ -55,10 +55,12 @@ var work ={
 		"description": " - Routing and scheduling 50-60 photography appointments daily</br>- Managing seven full-time photographers daily activities </br>- Editing photos using Photoshop</br>- Working directly with agents to meet their photo marketing needs</br>- Photographing listings and working with home owners to maximize their homes potential"
 	},
 	{
+		"employer": "Sibcy Cline Realtors",
 		"title": "Marketing Representative",
 		"description": " - Created direct mail pieces for agents</br> - Work directly with agents in creating design pieces and setting up a marketing plan</br> - Work with builders in creating marketing pieces</br> - Produce and submit ads in multiple publications"
 	},
 	{
+		"employer": "Sibcy Cline Realtors",
 		"title": "Marketing Assistant",
 		"description": " - Assisted marketing representatives with agent projects	</br> - Designed postcards and other print piece for builders - Create builder presentation interactive media - Produce pieces all the way through the print process - Assist in producing and submitting ads in multiple publications - Created portions of the listing magazine"
 	},
@@ -72,7 +74,20 @@ var work ={
 	]};
 
 work.display = function() {
-	var formattedWorkEmployer = HTMLworkEmployer.replace("%data%", work.jobs[0].employer);
+	if(work.jobs.length>0){
+		$("#workExperience").append(HTMLworkStart);
+	}
+		
+	for(job in work.jobs){
+		var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+		var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+		var formattedEmployerTitle = formattedEmployer + formattedTitle;
+		
+		$(".work-entry:last").append(formattedEmployerTitle);
+	}
+	
+	
+/**	var formattedWorkEmployer = HTMLworkEmployer.replace("%data%", work.jobs[0].employer);
 	var formattedWorkTitle = HTMLworkTitle.replace("%data%", work.jobs[0].title);
 	var formattedWorkDates = HTMLworkDates.replace("%data%", work.jobs[0].dates);
 	var formattedWorkLocation = HTMLworkLocation.replace("%data%", work.jobs[0].location);
@@ -100,6 +115,7 @@ work.display = function() {
 	var formattedWorkDescription = HTMLworkDescription.replace("%data%", work.jobs[3].description);	
 		
 		$(".work-entry").append(formattedWorkEmployer + formattedWorkTitle).append(formattedWorkDates).append(formattedWorkLocation).append(formattedWorkDescription + "</br>" + "</br>");
+**/
 };
 
 //projects
