@@ -90,37 +90,8 @@ work.display = function() {
 		var formattedWorkLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
 		var formattedWorkDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);	
 		
-		$(".work-entry:last").append(formattedEmployerTitle);
+		$(".work-entry:last").append(formattedEmployerTitle).append(formattedWorkDates).append(formattedWorkLocation).append(formattedWorkDescription + "</br>" + "</br>");
 	}
-	
-	
-/**	var formattedWorkEmployer = HTMLworkEmployer.replace("%data%", work.jobs[0].employer);
-	var formattedWorkTitle = HTMLworkTitle.replace("%data%", work.jobs[0].title);
-	
-		
-		$("#workExperience").append(HTMLworkStart); 
-		$(".work-entry").append(formattedWorkEmployer + formattedWorkTitle).append(formattedWorkDates).append(formattedWorkLocation).append(formattedWorkDescription + "</br>" + "</br>");
-		
-	var formattedWorkTitle = HTMLworkTitle.replace(" - %data%", work.jobs[1].title);
-	var formattedWorkDescription = HTMLworkDescription.replace("%data%", work.jobs[1].description);	
-		
-		$(".work-entry").append(formattedWorkTitle);
-		$(".work-entry").append(formattedWorkDescription + "</br>");
-
-	var formattedWorkTitle = HTMLworkTitle.replace(" - %data%", work.jobs[2].title);
-	var formattedWorkDescription = HTMLworkDescription.replace("%data%", work.jobs[2].description);	
-		
-		$(".work-entry").append(formattedWorkTitle);
-		$(".work-entry").append(formattedWorkDescription + "</br>");
-
-	var formattedWorkEmployer = HTMLworkEmployer.replace("%data%", work.jobs[3].employer);
-	var formattedWorkTitle = HTMLworkTitle.replace("%data%", work.jobs[3].title);
-	var formattedWorkDates = HTMLworkDates.replace("%data%", work.jobs[3].dates);
-	var formattedWorkLocation = HTMLworkLocation.replace("%data%", work.jobs[3].location);
-	var formattedWorkDescription = HTMLworkDescription.replace("%data%", work.jobs[3].description);	
-		
-		$(".work-entry").append(formattedWorkEmployer + formattedWorkTitle).append(formattedWorkDates).append(formattedWorkLocation).append(formattedWorkDescription + "</br>" + "</br>");
-**/
 };
 
 //projects
