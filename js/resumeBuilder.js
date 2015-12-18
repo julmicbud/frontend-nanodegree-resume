@@ -121,50 +121,21 @@ var projects ={
 };
 
 projects.display = function() {
-	var formattedProjectTitle = 
-		HTMLprojectTitle.replace("%data%", projects.pro[0].title);
-		
-	var formattedProjectDates = 
-		HTMLprojectDates.replace("%data%", projects.pro[0].dates);
+	if(projects.pro.length>0){
+			$("#projects").append(HTMLprojectStart);
+	};
 	
-	var formattedProjectDescription = 
-		HTMLprojectDescription.replace("%data%", projects.pro[0].description);
+	for(project in projects.pro){
+		var formattedProjectTitle = HTMLprojectTitle.replace("%data%", projects.pro[project].title);
+		var formattedProjectDates = HTMLprojectDates.replace("%data%", projects.pro[project].dates);
+		var formattedProjectDescription = HTMLprojectDescription.replace("%data%", projects.pro[project].description);
+		var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.pro[project].images);
 		
-	var formattedProjectImage = 
-		HTMLprojectImage.replace("%data%", projects.pro[0].images);
-	
-	$("#projects").append(HTMLprojectStart);
-	$(".project-entry").append(formattedProjectTitle).append(formattedProjectDates).append(formattedProjectDescription).append(formattedProjectImage + "</br>");
-
-	var formattedProjectTitle = 
-		HTMLprojectTitle.replace("%data%", projects.pro[1].title);
-		
-	var formattedProjectDates = 
-		HTMLprojectDates.replace("%data%", projects.pro[1].dates);
-	
-	var formattedProjectDescription = 
-		HTMLprojectDescription.replace("%data%", projects.pro[1].description);
-		
-	var formattedProjectImage = 
-		HTMLprojectImage.replace("%data%", projects.pro[1].images);
-	
-	$(".project-entry").append(formattedProjectTitle).append(formattedProjectDates).append(formattedProjectDescription).append(formattedProjectImage + "</br>");
-
-	var formattedProjectTitle = 
-		HTMLprojectTitle.replace("%data%", projects.pro[2].title);
-		
-	var formattedProjectDates = 
-		HTMLprojectDates.replace("%data%", projects.pro[2].dates);
-	
-	var formattedProjectDescription = 
-		HTMLprojectDescription.replace("%data%", projects.pro[2].description);
-		
-	var formattedProjectImage = 
-		HTMLprojectImage.replace("%data%", projects.pro[2].images);
-	
-	$(".project-entry").append(formattedProjectTitle).append(formattedProjectDates).append(formattedProjectDescription).append(formattedProjectImage + "</br>");
+		$(".project-entry").append(formattedProjectTitle).append(formattedProjectDates).append(formattedProjectDescription).append(formattedProjectImage + "</br>");
+	}
 };
 
+projects.display();
 
 //Education
 
@@ -259,13 +230,4 @@ education.display = function() {
 };
 
 bio.display();
-projects.display();
 education.display();
-
-
-$(document).click(function(loc){
-	var x = loc.pageX;
-	var y = loc.pageY;
-	
-	logClicks(x,y);
-});
