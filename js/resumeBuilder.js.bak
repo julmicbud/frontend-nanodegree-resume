@@ -133,44 +133,6 @@ projects.display = function() {
 		
 		$(".project-entry").append(formattedProjectTitle).append(formattedProjectDates).append(formattedProjectDescription).append(formattedProjectImage + "</br>");
 	}
-	
-		
-	
-	
-
-		
-
-	
-
-	$(".project-entry").append(formattedProjectImage + "</br>");
-
-	var formattedProjectTitle = 
-		HTMLprojectTitle.replace("%data%", projects.pro[1].title);
-		
-	var formattedProjectDates = 
-		HTMLprojectDates.replace("%data%", projects.pro[1].dates);
-	
-	var formattedProjectDescription = 
-		HTMLprojectDescription.replace("%data%", projects.pro[1].description);
-		
-	var formattedProjectImage = 
-		HTMLprojectImage.replace("%data%", projects.pro[1].images);
-	
-	$(".project-entry").append(formattedProjectTitle).append(formattedProjectDates).append(formattedProjectDescription).append(formattedProjectImage + "</br>");
-
-	var formattedProjectTitle = 
-		HTMLprojectTitle.replace("%data%", projects.pro[2].title);
-		
-	var formattedProjectDates = 
-		HTMLprojectDates.replace("%data%", projects.pro[2].dates);
-	
-	var formattedProjectDescription = 
-		HTMLprojectDescription.replace("%data%", projects.pro[2].description);
-		
-	var formattedProjectImage = 
-		HTMLprojectImage.replace("%data%", projects.pro[2].images);
-	
-	$(".project-entry").append(formattedProjectTitle).append(formattedProjectDates).append(formattedProjectDescription).append(formattedProjectImage + "</br>");
 };
 
 projects.display();
