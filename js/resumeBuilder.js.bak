@@ -13,14 +13,14 @@ var bio = {
 		"location": "Loveland, OH"
 	},
 	"website": "www.julmicbud.com",
-	"biopic" : "https://a3-images.myspacecdn.com/images03/20/b6d8a8f46c644ca99a4dfc662a8109f8/300x300.jpg",
+	"photo" : "https://a3-images.myspacecdn.com/images03/20/b6d8a8f46c644ca99a4dfc662a8109f8/300x300.jpg",
 	"welcomeMessage" : "Hello and welcome to my resume. Feel free to look around and let me know if you have any questions.",
 	"skills" :["HTML5", "CSS","Javascript","JQuery","Photoshop","Illustrator","Indesign"],
 	};
 bio.display = function() {
 	var formattedName = HTMLheaderName.replace("%data%", bio.name);
 	var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-	var formattedBioPic =	HTMLbioPic.replace("%data%", bio.biopic);
+	var formattedBioPic =	HTMLbioPic.replace("%data%", bio.photo);
 	var formattedWelcomeMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 	
 	$("#header").prepend(formattedRole).prepend(formattedName).append(formattedBioPic + formattedWelcomeMessage);	
