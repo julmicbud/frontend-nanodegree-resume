@@ -14,6 +14,11 @@ h6 {
   font-family: "Roboto", sans-serif;
 }
 
+h1,
+h3{
+	font-weight: bold;
+}
+
 .clear-fix {
   overflow: auto;
 }
@@ -110,10 +115,11 @@ a {
 
 .orange-text {
   color: #2eb82e;
+  font-weight: bold;
 }
 
 .white-text {
-  font-weight: bold;
+  
   color: #fff;
 }
 
@@ -174,6 +180,13 @@ span {
   justify-content: flex-start;
 }
 
+body{
+	color: #464444;
+}
+
+.active{
+	color: #2eb82e;
+}
 
 /* Media queries to handle various device widths */
 
