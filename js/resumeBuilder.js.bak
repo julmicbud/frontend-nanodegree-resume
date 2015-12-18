@@ -10,6 +10,7 @@ var bio = {
 		"email" : "julmicbud@gmail.com",
 		"twitter": "@julmicbud",
 		"github": "julmicbud",
+		"location": "Loveland, OH"
 	},
 	"website": "www.julmicbud.com",
 	"photo" : "https://a3-images.myspacecdn.com/images03/20/b6d8a8f46c644ca99a4dfc662a8109f8/300x300.jpg",
@@ -42,6 +43,8 @@ bio.display = function() {
 
 	
 };
+
+bio.display();
 
 //work
 
@@ -131,7 +134,7 @@ projects.display = function() {
 		var formattedProjectDescription = HTMLprojectDescription.replace("%data%", projects.pro[project].description);
 		var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.pro[project].images);
 		
-		$(".project-entry").append(formattedProjectTitle).append(formattedProjectDates).append(formattedProjectDescription).append(formattedProjectImage + "</br>");
+		$(".project-entry:last").append(formattedProjectTitle).append(formattedProjectDates).append(formattedProjectDescription).append(formattedProjectImage + "</br>");
 	}
 };
 
@@ -229,5 +232,7 @@ education.display = function() {
 
 };
 
-bio.display();
 education.display();
+
+//map
+$("#mapDiv").append(googleMap);

@@ -10,6 +10,7 @@ var bio = {
 		"email" : "julmicbud@gmail.com",
 		"twitter": "@julmicbud",
 		"github": "julmicbud",
+		"location": "Loveland, OH"
 	},
 	"website": "www.julmicbud.com",
 	"photo" : "https://a3-images.myspacecdn.com/images03/20/b6d8a8f46c644ca99a4dfc662a8109f8/300x300.jpg",
@@ -145,7 +146,7 @@ var education ={
 	"schools":[
 	{
 		"name": "University of Evansville",
-		"city": "Evansville, IN",
+		"location": "Evansville, IN",
 		"degree": "BS",
 		"major": "Visual Communications", 
 		"minor": "Mass Communications",
@@ -153,7 +154,7 @@ var education ={
 		},
 	{
 		"name": "University of Cincinnati",
-		"city": "Cincinnati, OH",
+		"location": "Cincinnati, OH",
 		"certificate": "Social Media for Business Certification",
 		"dates": "2012"
 	}
@@ -182,7 +183,7 @@ education.display = function() {
 		HTMLschoolDates.replace("%data%", education.schools[0].dates);
 		
 	var formattedSchoolLocation = 
-		HTMLschoolLocation.replace("%data%", education.schools[0].city);
+		HTMLschoolLocation.replace("%data%", education.schools[0].location);
 	
 	var formattedSchoolDegree =
 		HTMLschoolDegree.replace("%data%", education.schools[0].degree);
@@ -206,7 +207,7 @@ education.display = function() {
 		HTMLschoolDates.replace("%data%", education.schools[1].dates);
 		
 	var formattedSchoolLocation = 
-		HTMLschoolLocation.replace("%data%", education.schools[1].city);
+		HTMLschoolLocation.replace("%data%", education.schools[1].location);
 		
 	var formattedSchoolCertification =
 		HTMLschoolMajor.replace("Major: %data%", education.schools[1].certificate);	
@@ -232,3 +233,6 @@ education.display = function() {
 };
 
 education.display();
+
+//map
+$("#mapDiv").append(googleMap);
