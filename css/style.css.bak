@@ -26,7 +26,7 @@ h6 {
 
 h1 {
   font-size: 40px;
-  color: #f5a623;
+  color: #2eb82e;
   line-height: 48px;
   display: inline;
 }
@@ -100,16 +100,16 @@ a {
 }
 
 #skills-h3 {
-  color: #f5ae23;
+  color: #2eb82e;
   display: none;
 }
 
 .orange {
-  background-color: #f5ae23;
+  background-color: #2eb82e;
 }
 
 .orange-text {
-  color: #f5ae23;
+  color: #2eb82e;
 }
 
 .white-text {
@@ -130,9 +130,6 @@ a {
 /* TODO: Replace with image later */
 #header {
   background-color: #484848;
-}
-li{
-	flex-direction: column;
 }
 
 .flex-box {
@@ -171,6 +168,11 @@ span {
   text-align: center;
 }
 
+#skills {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+}
 
 
 /* Media queries to handle various device widths */
